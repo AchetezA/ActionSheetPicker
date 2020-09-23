@@ -15,7 +15,7 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "ssh://git@192.168.52.10/HTA-iOS/Librairies/HTAHelpers", .exact("1.3.0")),
+        .package(url: "git@github.com:AchetezA/ActionSheetPicker-3.0.git", .exact("1.3.0")),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
