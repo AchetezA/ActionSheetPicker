@@ -4,19 +4,27 @@
 import PackageDescription
 
 let package = Package(
-    name: "ActionSheetPicker-3.0",
-                      targets: [.target(name: "Alamofire",
-                                        path: "Source")],
-
+    name: "ActionSheetPicker",
+    platforms: [.iOS(.v11)],
     products: [
+        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "ActionSheetPicker-3.0",
-            targets: ["ActionSheetPicker-3.0"]),
+            name: "ActionSheetPicker",
+            type: .dynamic,
+            targets: ["ActionSheetPicker"]),
+    ],
+    dependencies: [
+        // Dependencies declare other packages that this package depends on.
+        .package(url: "ssh://git@192.168.52.10/HTA-iOS/Librairies/HTAHelpers", .exact("1.3.0")),
     ],
     targets: [
+        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
+        // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "CoreActionSheetPicker",
-            path: "CoreActionSheetPicker")
-        ],
-    swiftLanguageVersions: [.v5]
+            name: "ActionSheetPicker",
+            dependencies: [
+
+            ]),
+    ]
 )
+
