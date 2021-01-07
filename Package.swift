@@ -21,7 +21,10 @@ let package = Package(
         .target(
             name: "ActionSheetPicker",
             dependencies: [],
-            publicHeadersPath: "Sources/ActionSheetPicker"
+            path: "ActionSheetPicker",
+            publicHeadersPath: ""
         )
-    ]
+    ],
+    
+    swiftLanguageVersions: [.v5]
 )

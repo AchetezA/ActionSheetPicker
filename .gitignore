@@ -1,6 +1,7 @@
 Example Projects/Carthage-example/Carthage/Checkouts
 
 ### Xcode ###
+.DS_Store
 build/
 *.pbxuser
 !default.pbxuser
